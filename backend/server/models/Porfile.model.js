@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
-
-const Profile = mongoose.Schema({
+const ProfileSchema = mongoose.Schema({
     picture: {
         type: String,
         required: false
@@ -12,12 +11,15 @@ const Profile = mongoose.Schema({
     },
     number: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     address: {
-        type: Stringx,
+        type: String,
         required: false
     }
 });
+
+const Profile = mongoose.model('Profile', ProfileSchema);
 
 export default Profile;

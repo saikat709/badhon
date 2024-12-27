@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const Blood = mongoose.Schema({
+const InfoSchema = mongoose.Schema({
     group: {
         type: String,
         required: true
@@ -17,7 +17,7 @@ const Blood = mongoose.Schema({
         type: Date,
         required: false
     },
-    unAvailableTill: {
+    unAvailableTo: {
         type: Date,
         required: false
     },
@@ -29,6 +29,8 @@ const Blood = mongoose.Schema({
         type: Object,  // need relationship here
         required: false
     }
-});
+}, { timrstamps: true} );
 
-export default Blood;
+const Info = mongoose.model('Info', InfoSchema)
+
+export default Info;
