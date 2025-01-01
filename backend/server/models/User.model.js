@@ -22,7 +22,7 @@ const UserSchema = new mongoose.Schema(
         },
         password: { 
             type: String, 
-            required: true 
+            required: true
         },
 
         info: {
@@ -54,5 +54,5 @@ UserSchema.methods.matchPassword = async function (password) {
     return await bcrypt.compare(password, this.password);
 };
 
-const User = mongoose.model( 'User', UserSchema );
+const User = new mongoose.model( 'User', UserSchema );
 export default User;

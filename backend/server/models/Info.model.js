@@ -25,12 +25,13 @@ const InfoSchema = mongoose.Schema({
         type: String,
         required: false
     },
-    donations: {
-        type: Object,  // need relationship here
+    donations: [{
+        type: mongoose.Types.ObjectId,
+        ref: 'Donation',
         required: false
-    }
-}, { timrstamps: true} );
+    }]
+}, { timrstamps: true } );
 
-const Info = mongoose.model('Info', InfoSchema)
+const Info = new mongoose.model('Info', InfoSchema)
 
 export default Info;

@@ -1,12 +1,12 @@
 import { Router } from "express";
 import User from "../models/User.model.js";
-import Profile from "../models/Porfile.model.js";
+import Profile from "../models/Profile.model.js";
 import genericRouterController from "../generic/genericRouterController.js";
 
 // const genericsRouter = Router();
 
 // generic routes
-const userRoutes = genericRouterController(User);
+const userRoutes = genericRouterController(User, ['info']);
 const profileRoutes = genericRouterController(Profile);
 
 // assigning routes as middleware 

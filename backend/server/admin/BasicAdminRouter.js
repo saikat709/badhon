@@ -4,7 +4,7 @@ import User from '../models/User.model.js';
 import * as AdminJSMongoose from '@adminjs/mongoose';
 import session from 'express-session';
 import Connect from 'connect-pg-simple';
-import Profile from '../models/Porfile.model.js';
+import Profile from '../models/Profile.model.js';
 
 // const Products = require('./models/products'); 
 

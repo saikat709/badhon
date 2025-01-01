@@ -10,11 +10,17 @@ const BloodRequestSchema = new mongoose.Schema(
             type: String,
             required: true
         },
+        city: {
+
+        },
+        area: {
+
+        },
         time: {
             type: Number,
             required: true
         },
-        date: {
+        deadline: {
             type: Date,
             required: true
         },
@@ -22,6 +28,6 @@ const BloodRequestSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-const BloodRequest = mongoose.model( 'BloodRequest', BloodRequest );
+const BloodRequest = new mongoose.model( 'BloodRequest', BloodRequestSchema );
 
 export default BloodRequest;
